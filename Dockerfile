@@ -3,7 +3,7 @@ WORKDIR /opt/app
 COPY package.json pnpm-lock.yaml ./
 RUN npm install -g pnpm
 RUN pnpm install --frozen-lockfile
-FROM node:lts-alpine AS builder
+FROM node:latest AS builder
 ENV NODE_ENV=production
 WORKDIR /opt/app
 RUN npm install -g pnpm
