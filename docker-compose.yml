@@ -11,7 +11,7 @@ services:
       - "127.0.0.1:3009:3000"
     env_file: .env
     depends_on:
-      - libremdb-redis
+      - libremdb_redis
     restart: always
     user: 65534:65534
     read_only: true
@@ -24,9 +24,9 @@ services:
     networks:
       - libremdb
 
-  libremdb-redis:
-    container_name: libremdb-redis
-    hostname: libremdb-redis
+  libremdb_redis:
+    container_name: libremdb_redis
+    hostname: libremdb_redis
     image: redis:latest
     restart: always
     user: nobody
